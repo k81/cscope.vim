@@ -28,27 +28,6 @@ endif
 " show msg when any other cscope db added
 set cscopeverbose
 
-" Default key mappings
-"
-"   's'   symbol: find all references to the token under cursor
-"   'g'   global: find global definition(s) of the token under cursor
-"   'c'   calls:  find all calls to the function name under cursor
-"   't'   text:   find all instances of the text under cursor
-"   'e'   egrep:  egrep search for the word under cursor
-"   'f'   file:   open the filename under cursor
-"   'i'   includes: find files that include the filename under cursor
-"   'd'   called: find functions that function under cursor calls
-
-nnoremap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nnoremap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nnoremap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nnoremap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nnoremap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nnoremap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nnoremap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nnoremap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-vnoremap <C-\>t y:cs find t <C-R>=escape(@",'\\/.*$^~[]')<CR><CR>
-
 " See below about creating the cscope.files file.
 " This autocmd will remove the entries from within
 " a file that cscope cannot deal with, or does not
